@@ -1,10 +1,10 @@
-<h1 style="text-align:center; font-size: 60px;">2025 평창중학교 SW·AI교내 캠프</h1>
+<h1 style="text-align:center; font-size: 60px;">마이크로비트와 티처블머신</h1>
 
 <!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Teachable Machine for Micro:bit</title>
+<title>인공지능을 활용한 피지컬 컴퓨팅 구현하기</title>
    <style>
     body {
         font-family: 'Roboto', sans-serif;
@@ -181,7 +181,7 @@
 
 <body>
     <div class="title-head" width="872" align="center">
-        <h1> 평창중학교 티처블머신_마이크로비트 </h1>
+        <h1> 평창중학교 SW·AI 교내 캠프프 </h1>
      </div>
     <input type="hidden" id="modelType">
     <div class="container">
@@ -196,7 +196,7 @@
           <table align="center">
             <tr height=350 >
                 <td width=900>
-                    <h1>마이크로비트 시리얼 통신</h1>
+                    <h1>Micro:bit USB & webSerial Test page</h1>
                     <h3>1. Connection settings: <button id="connectButton" onclick="getReader();"><h3>Connect</h3></button></h3>
                 <br>
                     <h3>2. Enter message: <input type="text" id="editText" placeholder="메시지를 입력하세요" /></h3>
@@ -210,24 +210,24 @@
           <table  align="center" >
             <tr>
             <td width=900>
-                <h1 style="font-size:40px;">티처블머신 이미지 모델 </h1>
-            1.    <label for="model-url-input">티처블머신 이미지 모델 URL:</label>
+                <h1 style="font-size:40px;">Teachable Machine Image Model </h1>
+            1.    <label for="model-url-input">Teachable Machine Image Model URL:</label>
                 <input type="text" id="model-url-input-imgae" placeholder="Enter your model URL here" >
                 <button type="button" onclick="setModelUrl('Image')">Set Model URL</button>
                 <span id="model-url-display-image"></span>
                 <br>    <br>
-            2.  <label for="prediction-input">예측값(0 - 100):</label>
+            2.  <label for="prediction-input">Prediction Value (0 - 100):</label>
                 <input type="text" id="prediction-input-image" placeholder="90">
                 <button type="button" onclick="setPredictionValue('Image')">Set Prediction Value</button>
                 <span id="prediction-display-image"></span>
                 <br>    <br>
-            3.  <label for="connect-webserial">USB 연결:</label>
+            3.  <label for="connect-webserial">Connect with USB:</label>
                 <button id="connect-to-serial" type="button" onClick="connectToSerial()">Connect</button>
                 <button id="disconnect-serial" type="button" onClick="disconnectSerial()">Disconnect</button>
                 <br>    <br>
-            4. AI Model 불러오기: <button type="button" onclick="loadModel('Image')">Load</button>
+            4. Load AI Model: <button type="button" onclick="loadModel('Image')">Load</button>
                 <br>    <br>
-            5. 티쳐블 머신 시작: <button type="button" onclick="init('Image')" disabled id="start-button-image">Start</button>
+            5. Start Teacherble Machine: <button type="button" onclick="init('Image')" disabled id="start-button-image">Start</button>
                 <br>    <br>
                 <div id="label-container-image" style="font-size:20px;"></div>
                 <div id="lastSentClassContainer">Last Sent Class: <span id="lastSentClass-image">None</span></div>
@@ -266,24 +266,24 @@
             <table align="center">
                 <tr>
                 <td width=900>
-                    <h1 style="font-size:40px;">티처블머신 포즈 모델</h1>
-                1.  <label for="model-url-input">티처블머신 포즈 모델URL:</label>
+                    <h1 style="font-size:40px;">Teachable Machine Pose Model</h1>
+                1.  <label for="model-url-input">Teachable Machine Pose Model URL:</label>
                     <input type="text" id="model-url-input-pose" placeholder="Enter your model URL here" >
                     <button type="button" onclick="setModelUrl('Pose')">Set Model URL</button>
                     <span id="model-url-display-pose"></span>
                     <br>    <br>
-                2.  <label for="prediction-input">예측값 (0 - 100):</label>
+                2.  <label for="prediction-input">Prediction Value (0 - 100):</label>
                     <input type="text" id="prediction-input-pose" placeholder="90">
                     <button type="button" onclick="setPredictionValue('Pose')">Set Prediction Value</button>
                     <span id="prediction-display-pose"></span>
                     <br>    <br>
-                3.  <label for="connect-webserial">USB 연결:</label>
+                3.  <label for="connect-webserial">Connect with USB:</label>
                     <button id="connect-to-serial2" type="button" onClick="connectToSerial();">Connect</button>
                     <button id="disconnect-serial2" type="button" onClick="disconnectSerial();">Disconnect</button>
                     <br>    <br>
-                4. AI Model 불러오기: <button id="loadModelButton" type="button" onclick="loadModel('Pose')" style="background-color: pink;">Load</button>
+                4. Load AI Model: <button id="loadModelButton" type="button" onclick="loadModel('Pose')" style="background-color: pink;">Load</button>
                     <br>    <br>
-                5. 티처블머신 시작: <button type="button" onclick="init('Pose')" disabled id="start-button-pose">Start</button>
+                5. Start Teacherble Machine: <button type="button" onclick="init('Pose')" disabled id="start-button-pose">Start</button>
                     <br>    <br>
                     <div id="label-container-pose" style="font-size:20px;"></div>
                     <div id="lastSentClassContainer">Last Sent Class: <span id="lastSentClass-pose">None</span></div>
@@ -308,7 +308,41 @@
                     <input type="checkbox" id="flip-webcam-pose">
                     &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;
                     <label for="webcam-select">OtherCAM:</label>
-                    <select id="webcam-select-pose" onchange="changeS작
+                    <select id="webcam-select-pose" onchange="changeSelectedWebcam('Pose');"></select>
+                    <br>
+                Option3. Connect Bluetooth &nbsp;
+                    <button id="connectButton" onClick="microBitCon();">Connect</button>
+                    <button id="disconnectButton" onClick="microBitDCon();">Disconnect</button>
+                     <br>
+                    <br>
+                </td>
+                </tr>
+                <tr>
+
+ 
+
+            </table>    
+        </div>
+        <div class="tab-content" id="tabContent04">
+            <table align="center">
+                <tr>
+                <td width=900>
+                <h1 style="font-size:40px;">Teachable Machine Audio Model</h1>
+                1.        <label for="url-input">Teachable Machine Audio Model URL: </label>
+                          <input type="text" id="model-url-input-voice">
+                          <button type="button" onclick="setModelUrl('Voice');">OK</button>
+                          <span id="model-url-display-voice"></span>
+                    <br>    <br>
+                2.        <label for="url-input">Confidence Setting: </label>
+                          <input type="text" id="prediction-input-voice" placeholder="90">
+                          <button type="button" onclick="setPredictionValue('Voice');">OK(0-100)</button>
+                          <span id="prediction-display-voice"></span>
+                    <br>    <br>
+                3. Connect with USB:
+                          <button id="connect-to-serial" onClick="connectToSerial();">Connect</button>
+                          <button id="disconnect-serial" onClick="disconnectSerial();">Disconnect</button>
+                    <br>    <br>
+                4. Start Teachable Machine
                           <button type="button" onclick="initVoice();"><h2>Start</h2></button>
                     <br>    <br>
                           <h2><div id="label-container-voice"></div></h2>
